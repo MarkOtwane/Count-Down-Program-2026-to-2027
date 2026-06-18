@@ -1,372 +1,701 @@
-# Complete Admin CMS & UI Redesign Prompt
+# MicroTech Solutions - Complete Website Modernization & CMS Overhaul
 
-You are working on the **MicroTech Solutions** website.
+You are a senior UI/UX designer, frontend architect, backend engineer, and product designer. Your task is to transform the MicroTech Solutions website into a premium, enterprise-grade corporate website comparable in quality to leading technology companies.
 
-## 1. Fix Existing Backend Errors
+## Primary Goal
 
-Investigate and resolve all backend API errors.
+Create a modern, fast, responsive, visually polished, and fully manageable website where **every piece of content can be edited through the admin dashboard** without modifying source code.
 
-Current issues:
-
-* `/api/settings` returns 500
-* `/api/projects` returns 500
-* `/api/products` returns 500
-* `/api/team?visible=true` returns 500
-
-Tasks:
-
-* Check API routes.
-* Check database connection.
-* Verify environment variables.
-* Add proper error handling.
-* Return meaningful JSON errors instead of generic 500 responses.
-* Ensure every endpoint works correctly with GET, POST, PUT, PATCH, and DELETE where appropriate.
+The final product should feel like a professionally designed SaaS and technology company website.
 
 ---
 
-## 2. Remove Cloudflare Script
+# 1. Fix All Existing Issues
 
-The project is trying to load:
+Investigate and resolve all existing frontend and backend issues.
 
-`/cdn-cgi/challenge-platform/scripts/jsd/main.js`
+Current issues include:
 
-This returns 404.
-
-Remove every reference to this script because the site is not using Cloudflare Bot Protection.
-
-There should be no request to `/cdn-cgi/*`.
+* API endpoints returning HTTP 500 errors
+* Broken API integrations
+* Missing error handling
+* Broken data loading
+* Cloudflare script 404 errors
+* Remove every unnecessary script causing console errors
+* Ensure the browser console has zero errors or warnings in production
 
 ---
 
-## 3. Build a Complete Admin CMS
+# 2. Complete CMS
 
-The admin panel should control **EVERY SINGLE ITEM** on the landing page without touching code.
+The admin dashboard should become a complete Content Management System.
 
-The admin dashboard should include:
+Every visible element on the website must be editable.
 
-### Hero Section
+This includes:
 
-Editable:
-
-* Main heading
-* Subheading
-* Description
-* CTA button text
-* CTA button link
-* Hero image
-* Background image
-* Background overlay
+* Hero section
+* Navigation
+* Logo
+* Company information
+* About section
+* Services
+* Products
+* Portfolio
+* Projects
+* Team
+* Testimonials
+* FAQ
+* Blog
+* Careers
+* Contact
+* Footer
+* Buttons
+* Images
+* Icons
+* Colors where appropriate
+* Background images
+* Videos
 * Statistics
-* Badges
+* Client logos
+* Partners
+* Awards
+* Certifications
+* SEO settings
+
+No content should require editing source code.
 
 ---
 
-### Navigation
+# 3. Modern UI Redesign
 
-Editable:
+The current website feels outdated and uses colors that are too bright.
 
-* Logo
-* Company name
-* Menu items
-* Order
-* Links
-* CTA button
+Completely redesign the interface using modern UI principles.
 
----
+Use this color palette:
 
-### About Section
+Primary Blue
+#4A90E2
 
-Editable:
+Secondary Blue
+#2563EB
 
-* Title
-* Subtitle
-* Description
-* Images
-* Company statistics
-* Features
-* Timeline
-* Vision
-* Mission
+Smoke White
+#F5F7FA
 
----
+Pure White
+#FFFFFF
 
-### Services
+Black
+#111827
 
-Admin should be able to:
+Dark Gray
+#374151
 
-* Add service
-* Edit service
-* Delete service
-* Change icons
-* Change images
-* Change descriptions
-* Reorder services
+Light Gray
+#E5E7EB
 
----
+Success
+#10B981
 
-### Products
+Warning
+#F59E0B
 
-Admin should be able to:
-
-* Add products
-* Edit products
-* Delete products
-* Upload product images
-* Set prices
-* Set categories
-* Set featured products
-* Hide/show products
-
----
-
-### Projects / Portfolio
-
-Admin should be able to:
-
-* Add projects
-* Edit projects
-* Delete projects
-* Upload multiple images
-* Change categories
-* Change completion dates
-* Add technologies used
-* Add client names
-* Add project descriptions
-
----
-
-### Team
-
-Admin should be able to:
-
-* Add members
-* Edit members
-* Delete members
-* Upload profile photos
-* Set position
-* Set social media links
-* Hide/show members
-
----
-
-### Testimonials
-
-Editable:
-
-* Customer name
-* Position
-* Company
-* Rating
-* Testimonial
-* Customer photo
-
----
-
-### FAQ
-
-Admin should be able to:
-
-* Add FAQ
-* Edit FAQ
-* Delete FAQ
-* Reorder FAQ
-
----
-
-### Contact Section
-
-Editable:
-
-* Phone
-* Email
-* Address
-* Google Map
-* Contact form recipient email
-* WhatsApp number
-
----
-
-### Footer
-
-Editable:
-
-* Logo
-* Copyright
-* Links
-* Social media
-* Newsletter
-* Company description
-
----
-
-### Global Website Settings
-
-Admin should be able to manage:
-
-* Company name
-* Logo
-* Favicon
-* SEO title
-* SEO description
-* Keywords
-* Google Analytics ID
-* Meta tags
-* Open Graph tags
-* Social links
-* Contact information
-
----
-
-## 4. Media Library
-
-Create a media manager.
-
-Features:
-
-* Upload images
-* Upload videos
-* Delete files
-* Replace files
-* Search files
-* Folder organization
-* Image optimization
-
----
-
-## 5. Rich Text Editor
-
-Every text field should support formatting:
-
-* Bold
-* Italic
-* Underline
-* Lists
-* Tables
-* Links
-* Images
-* Code blocks
-* Headings
-
----
-
-## 6. Live Preview
-
-Every edit should have:
-
-* Save Draft
-* Publish
-* Live Preview
-* Auto Save
-
----
-
-## 7. Authentication
-
-Secure admin panel.
-
-Features:
-
-* Login
-* Logout
-* Password hashing
-* Session management
-* JWT or secure cookies
-* Protected API routes
-* CSRF protection
-* Rate limiting
-
----
-
-## 8. Remove Dark Mode
-
-Completely remove Dark Mode.
-
-Requirements:
-
-* Remove dark theme toggle.
-* Delete all dark mode CSS variables.
-* Remove unused dark mode classes.
-* Remove JavaScript controlling dark mode.
-* Default to one professional light theme.
-
----
-
-## 9. Redesign the UI
-
-Current colors are too bright.
-
-Replace them with a modern corporate palette.
-
-Primary Colors:
-
-* Light Blue: #4A90E2
-* Smoke White: #F5F7FA
-* White: #FFFFFF
-* Black: #111111
-* Dark Gray: #444444
-* Border Gray: #E5E7EB
-
-Guidelines:
-
-* Soft gradients only.
-* Minimal shadows.
-* Plenty of white space.
-* Rounded corners (10–14px).
-* Smooth transitions.
-* Professional appearance.
-* Responsive across desktop, tablet, and mobile.
+Danger
+#EF4444
 
 Avoid:
 
 * Neon colors
-* Oversaturated blues
+* Oversaturated gradients
 * Bright cyan
-* Bright backgrounds
-* Excessive animations
+* Excessive shadows
+* Busy backgrounds
+
+The design should feel clean, premium, and trustworthy.
 
 ---
 
-## 10. Improve UX
+# 4. Remove Dark Mode
 
-Add:
+Remove dark mode completely.
 
-* Skeleton loaders
-* Toast notifications
-* Empty states
-* Loading indicators
-* Confirmation dialogs
-* Better error messages
-* Responsive layouts
-* Accessible forms
-* Keyboard navigation
-* ARIA labels
+Delete:
+
+* Theme toggle
+* Dark CSS variables
+* Dark styles
+* JavaScript related to dark mode
+
+The application should have one polished light theme.
 
 ---
 
-## 11. Code Quality
+# 5. Typography
 
-Refactor the project to use:
+Implement a premium typography system.
 
-* Reusable components
-* Clean folder structure
-* Type safety (if using TypeScript)
-* API validation
-* Input sanitization
-* Proper logging
-* Consistent naming conventions
-* Performance optimization
-* Lazy loading
-* Image optimization
-* Caching where appropriate
+Use modern fonts.
+
+Improve:
+
+* Heading hierarchy
+* Font weights
+* Letter spacing
+* Line height
+* Paragraph spacing
+* Readability
+
+Typography should resemble modern enterprise software websites.
 
 ---
 
-## 12. Final Requirement
+# 6. Spacing System
 
-The final website should behave like a full Content Management System (CMS).
+Adopt an 8-point spacing system.
 
-**Nothing on the landing page should require editing source code.**
+Ensure:
 
-Every visible element—including text, images, icons, buttons, links, colors (where appropriate), section visibility, order, and content—must be manageable from the admin dashboard through an intuitive interface.
+* Consistent margins
+* Consistent paddings
+* Proper whitespace
+* Better visual hierarchy
 
-The system should be production-ready, responsive, secure, maintainable, and visually polished with a clean, modern corporate design based on the Light Blue, Smoke White, White, and Black color palette.
+Nothing should appear cramped.
+
+---
+
+# 7. Component Library
+
+Create reusable UI components.
+
+Examples:
+
+Buttons
+
+Cards
+
+Modals
+
+Forms
+
+Inputs
+
+Dropdowns
+
+Tables
+
+Badges
+
+Tags
+
+Accordions
+
+Tabs
+
+Alerts
+
+Navigation
+
+Pagination
+
+Carousels
+
+Each component should share:
+
+* same border radius
+* spacing
+* shadows
+* hover effects
+* typography
+
+---
+
+# 8. Premium Animations
+
+Add subtle animations.
+
+Examples:
+
+Fade in
+
+Slide up
+
+Hover elevation
+
+Smooth scrolling
+
+Animated counters
+
+Page transitions
+
+Card hover
+
+Button ripple
+
+Loading skeletons
+
+Animated statistics
+
+Do not overuse animation.
+
+Animations should feel elegant.
+
+---
+
+# 9. Homepage Improvements
+
+Redesign every section.
+
+Hero
+
+* Modern layout
+* Better CTA
+* Strong value proposition
+* Professional illustration
+* Animated background
+* Statistics
+* Trust badges
+
+Services
+
+* Better cards
+* Better icons
+* Better spacing
+
+Projects
+
+* Masonry layout
+* Filters
+* Categories
+* Hover effects
+
+Team
+
+* Professional profile cards
+* Social links
+
+Testimonials
+
+* Carousel
+* Ratings
+* Customer images
+
+Contact
+
+* Better form
+* Google Maps
+* Multiple contact methods
+
+Footer
+
+* Large modern footer
+* Company overview
+* Quick links
+* Newsletter
+* Social icons
+* Certifications
+
+---
+
+# 10. Add New Sections
+
+Include professionally designed sections such as:
+
+Why Choose Us
+
+Our Process
+
+Technologies We Use
+
+Industries Served
+
+Partners
+
+Client Logos
+
+Case Studies
+
+Project Statistics
+
+Timeline
+
+Achievements
+
+Awards
+
+Certifications
+
+Blog
+
+Latest News
+
+FAQ
+
+Call To Action
+
+Newsletter
+
+---
+
+# 11. Better User Experience
+
+Improve every interaction.
+
+Include:
+
+Toast notifications
+
+Loading indicators
+
+Skeleton loading
+
+Success messages
+
+Confirmation dialogs
+
+Empty states
+
+404 page
+
+500 page
+
+Offline detection
+
+Retry buttons
+
+Form validation
+
+Helpful error messages
+
+Keyboard navigation
+
+Accessibility improvements
+
+---
+
+# 12. Media Manager
+
+Create a complete media library.
+
+Features:
+
+Upload
+
+Delete
+
+Replace
+
+Crop
+
+Compress
+
+Folder organization
+
+Search
+
+Preview
+
+Bulk delete
+
+Image optimization
+
+---
+
+# 13. Rich Text Editor
+
+Every content area should support:
+
+Bold
+
+Italic
+
+Underline
+
+Lists
+
+Tables
+
+Images
+
+Links
+
+Headings
+
+Videos
+
+Embedded content
+
+Code blocks
+
+---
+
+# 14. SEO
+
+Implement enterprise SEO.
+
+Include:
+
+Meta titles
+
+Meta descriptions
+
+Keywords
+
+Open Graph
+
+Twitter Cards
+
+JSON-LD
+
+Canonical URLs
+
+XML Sitemap
+
+Robots.txt
+
+Breadcrumbs
+
+Schema.org
+
+Image SEO
+
+Alt text
+
+---
+
+# 15. Security
+
+Improve security.
+
+Implement:
+
+Authentication
+
+Authorization
+
+Role-based access
+
+Password hashing
+
+Secure sessions
+
+Rate limiting
+
+CSRF protection
+
+Input validation
+
+Input sanitization
+
+Secure file uploads
+
+Audit logs
+
+---
+
+# 16. Performance
+
+Optimize the website.
+
+Goals:
+
+Lighthouse Score above 95
+
+Fast loading
+
+Lazy loading
+
+Image optimization
+
+Code splitting
+
+Tree shaking
+
+Font optimization
+
+Caching
+
+Compression
+
+Responsive images
+
+Minimal JavaScript
+
+No layout shifts
+
+---
+
+# 17. Mobile Experience
+
+Ensure the website is fully responsive.
+
+Optimize for:
+
+Mobile
+
+Tablet
+
+Laptop
+
+Desktop
+
+Ultra-wide monitors
+
+Improve:
+
+Navigation
+
+Cards
+
+Typography
+
+Forms
+
+Images
+
+Spacing
+
+Touch interactions
+
+---
+
+# 18. Accessibility
+
+Meet WCAG 2.2 AA standards.
+
+Support:
+
+Keyboard navigation
+
+Screen readers
+
+ARIA labels
+
+Focus indicators
+
+Proper contrast
+
+Semantic HTML
+
+Accessible forms
+
+---
+
+# 19. Admin Dashboard
+
+Upgrade the dashboard into a professional CMS.
+
+Include:
+
+Dashboard analytics
+
+Visitor statistics
+
+Media manager
+
+SEO manager
+
+User management
+
+Role management
+
+Activity logs
+
+Notifications
+
+Content scheduling
+
+Draft mode
+
+Preview mode
+
+Autosave
+
+Backup & restore
+
+Search
+
+Global settings
+
+Theme settings
+
+Website maintenance mode
+
+---
+
+# 20. Code Quality
+
+Refactor the project.
+
+Requirements:
+
+Reusable components
+
+Clean architecture
+
+Consistent naming
+
+Modular code
+
+Proper folder structure
+
+API abstraction
+
+Error boundaries
+
+Type safety
+
+Logging
+
+Testing
+
+Scalable architecture
+
+Maintainable codebase
+
+---
+
+# 21. Professional Appearance
+
+The final website should have the same level of polish, usability, consistency, and attention to detail as world-class technology companies.
+
+Take inspiration from the design quality—not by copying layouts—from companies such as:
+
+* Stripe
+* Vercel
+* Linear
+* Notion
+* Webflow
+* GitHub
+* Microsoft
+* Atlassian
+* Figma
+
+Focus on:
+
+* Clean layouts
+* Premium spacing
+* Refined typography
+* Smooth interactions
+* Modern components
+* Professional illustrations
+* High-quality imagery
+* Elegant animations
+* Excellent usability
+
+---
+
+# Final Acceptance Criteria
+
+The project is only complete when:
+
+* There are no console errors.
+* There are no broken API endpoints.
+* Every landing page element is editable from the admin dashboard.
+* The interface is modern, consistent, and professional.
+* The website performs exceptionally well on desktop and mobile.
+* Accessibility and SEO best practices are implemented.
+* The codebase is clean, maintainable, secure, and production-ready.
+* The user experience reflects the quality expected of a modern enterprise technology company.
